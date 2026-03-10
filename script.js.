@@ -1,0 +1,40 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Dark Mode
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme) {
+        htmlElement.setAttribute('data-theme', savedTheme);
+        updateButtonIcon(savedTheme);
+    } else {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (prefersDark) { htmlElement.setAttribute('data-theme', 'dark'); updateButtonIcon('dark'); }
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+        const newTheme = htmlElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateButtonIcon(newTheme);
+    });
+
+    function updateButtonIcon(theme) {
+        themeToggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+        themeToggleBtn.setAttribute('aria-label', theme === 'dark' ? 'Cambiar a claro' : 'Cambiar a oscuro');
+    }
+
+    // 2. Formulario Feedback
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault(); 
+            contactForm.innerHTML = `
+                <div style="text-align: center; padding: 3rem 1.5rem; background-color: var(--card-bg); border: 2px dashed var(--primary-color); border-radius: 8px; animation: fadeIn 0.5s ease;">
+                    <h3 style="color: var(--primary-color); font-size: 1.8rem; margin-bottom: 0.5rem;">¡Mensaje enviado! 🚀</h3>
+                    <p style="font-size: 1.1rem;">Gracias por escribir. Responderé lo más pronto posible.</p>
+                </div>
+            `;
+        });
+    }
+});
