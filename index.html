@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matías Umbarila | EcoTech Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <header class="sidebar">
+            <div class="sidebar-top">
+                <div class="profile-pic">
+                    <img src="https://via.placeholder.com/150/059669/ffffff?text=MU" alt="Matías Umbarila">
+                </div>
+                <h1 class="logo">Matías U.</h1>
+                <p class="tagline">Eco-Tech Developer</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#inicio">🌿 Inicio</a></li>
+                    <li><a href="#sobre-mi">📖 Sobre mí</a></li>
+                    <li><a href="#skills">⚙️ Habilidades</a></li>
+                    <li><a href="#proyectos">💡 Proyectos</a></li>
+                    <li><a href="#contacto">📬 Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <button id="theme-toggle" class="btn-theme">
+                    <span class="icon">🌙</span> Modo Oscuro
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="hero-eco" id="inicio">
+                <article class="hero-text">
+                    <h2>Innovar para <span>preservar</span>.</h2>
+                    <p class="hero-quote">"La tecnología no es enemiga de la naturaleza, es la herramienta definitiva para salvarla."</p>
+                    <a href="#proyectos" class="btn-eco">Ver mis prototipos</a>
+                </article>
+            </section>
+
+            <section class="section-eco about-eco" id="sobre-mi">
+                <div class="section-header">
+                    <h2>Sobre mi visión</h2>
+                    <div class="line"></div>
+                </div>
+                <article class="about-card">
+                    <p>Tengo 14 años y divido mi tiempo entre excursiones por los páramos colombianos y mi cautín de soldadura. Creo firmemente que la robótica y el Internet de las Cosas (IoT) son la clave para combatir el cambio climático. Me encanta armar circuitos con Arduino para medir variables ambientales y generar conciencia en mi comunidad escolar a través de datos reales.</p>
+                </article>
+            </section>
+
+            <section class="section-eco skills-eco" id="skills">
+                <div class="section-header">
+                    <h2>Capacidades Técnicas</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="skills-wrapper">
+                    <article class="skill-bar">
+                        <label>Robótica / Arduino <span>90%</span></label>
+                        <div class="track"><div class="fill" style="width: 90%;"></div></div>
+                    </article>
+                    <article class="skill-bar">
+                        <label>C++ para Microcontroladores <span>80%</span></label>
+                        <div class="track"><div class="fill" style="width: 80%;"></div></div>
+                    </article>
+                    <article class="skill-bar">
+                        <label>Electrónica Básica <span>85%</span></label>
+                        <div class="track"><div class="fill" style="width: 85%;"></div></div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section-eco projects-eco" id="proyectos">
+                <div class="section-header">
+                    <h2>Iniciativas Verdes</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="eco-grid">
+                    <article class="eco-card">
+                        <div class="card-img" style="background-color: #34d399;">🌱</div>
+                        <div class="card-info">
+                            <h3>Huerta Smart</h3>
+                            <p>Sistema de riego automatizado con sensores de humedad para la huerta del colegio.</p>
+                        </div>
+                    </article>
+                    <article class="eco-card">
+                        <div class="card-img" style="background-color: #10b981;">♻️</div>
+                        <div class="card-info">
+                            <h3>Recicla-Bot</h3>
+                            <p>Prototipo de caneca inteligente que cuenta las botellas plásticas recicladas por los estudiantes.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section-eco contact-eco" id="contacto">
+                <div class="section-header">
+                    <h2>Hagamos equipo</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="contact-layout">
+                    <div class="contact-links">
+                        <p>¿Tienes un proyecto ambiental en mente?</p>
+                        <a href="mailto:matias.eco@email.com" class="link-item">✉️ matias.eco@email.com</a>
+                        <a href="https://github.com/matias-eco" target="_blank" class="link-item">🐙 github.com/matias-eco</a>
+                    </div>
+                    
+                    <form class="contact-form eco-form">
+                        <div class="form-group">
+                            <input type="text" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" required placeholder="tu@correo.com">
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="4" required placeholder="Cuéntame tu idea verde..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-eco">Enviar Transmisión</button>
+                    </form>
+                </div>
+            </section>
+            
+            <footer class="eco-footer">
+                <p>&copy; 2026 Matías Umbarila. Desarrollado con energía limpia (y código).</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
